@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Takeda Xchange</title>
+<style>
+    body {
+        background-image: url('https://japaneseprints.net/wp-content/uploads/2023/02/YT100A-41.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        font-family: Arial, sans-serif;
+    }
+
+    h2 {
+        font-family: casual;
+        font-size: 75px;
+        color: red;
+        margin-top: 2px;
+    }
+
+    table {
+        margin-left: 100px;
+    }
+
+    td {
+        text-align: left;
+    }
+
+    img{
+        width: 500px;
+        height:600px;
+        margin-top: 3px;
+    }
+
+    .image-container {
+        float: right;
+        margin-right: 100px;
+    }
+
+    input[type="number"] {
+        padding: 5px;
+        margin-left: 50px;
+        width: 300px;
+        margin-top: 80px;
+        margin-bottom: 30px;
+    }
+
+    button {
+        margin-left: 310px;
+        background-image: url('https://cdn-images.threadless.com/threadless-media/artist_shops/shops/takedaart/products/632940/shirt-1529577472-e97e35343197e2edf239db6b8ae39f40.png?v=3&d=eyJvcHMiOiBbWyJ0cmltIiwgW2ZhbHNlLCBmYWxzZV0sIHt9XSwgWyJyZXNpemUiLCBbXSwgeyJ3aWR0aCI6IDk5Ni4wLCAiYWxsb3dfdXAiOiBmYWxzZSwgImhlaWdodCI6IDk5Ni4wfV0sIFsiY2FudmFzX2NlbnRlcmVkIiwgWzEyMDAsIDEyMDBdLCB7ImJhY2tncm91bmQiOiAiZmYwMDAwIn1dLCBbInJlc2l6ZSIsIFs4MDBdLCB7fV0sIFsiY2FudmFzX2NlbnRlcmVkIiwgWzgwMCwgODAwLCAiI2ZmZmZmZiJdLCB7fV0sIFsiZW5jb2RlIiwgWyJqcGciLCA4NV0sIHt9XV0sICJmb3JjZSI6IGZhbHNlLCAib25seV9tZXRhIjogZmFsc2V9');
+        background-size: cover;
+        border: none;
+        width: 150px;
+        height: 150px;
+        cursor: pointer;
+    }
+
+    .main {
+        padding: 20px;
+        margin-top: 20px;
+        margin-left: 130px;
+        width: 800px;
+        height: 550px;
+        background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Battle_of_Mikatagahara.jpg/1920px-Battle_of_Mikatagahara.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    h3{
+        font-size: 35x;
+        margin-bottom:1px;
+        color: white;
+    }
+
+    h4{
+        font-size: 30px;
+        color: white;
+        margin-top: 20px;
+    }
+</style>
+</head>
+<body>
+
+<center><h2>Takeda Xchange</h2></center>
+
+<div class="image-container">
+    <h1>
+        <img src="https://i.pinimg.com/originals/2c/7c/07/2c7c0722f6e54d19ee82effe9e82fe82.jpg" alt="Professor Kitty">
+    </h1>
+</div>
+
+<div class="main">
+    <center><h3>Takeda Shingen needs your help!</h3><br> <h3>Help him win the Battle of Mikatagahara by calculating the number of enemy troops!</h3><br></center>
+    <input type="number" id="num1" placeholder="Input your X value">
+    <input type="number" id="num2" placeholder="Input your Y value">
+
+    <button onclick="calculate()">Calculate</button>
+
+    <table>
+        <tr>
+            <td colspan="2" id="result"></td>
+        </tr>
+    </table>
+</div>
+
+<script>
+function calculate() {
+    var num1 = parseFloat(document.getElementById("num1").value);
+    var num2 = parseFloat(document.getElementById("num2").value);
+
+    var addition = num1 + num2;
+    var subtraction = num1 - num2;
+    var multiplication = num1 * num2;
+    var division = num1 / num2;
+
+    document.getElementById("result").innerHTML = "<strong>Addition:</strong> " + addition + "<br>" +
+                                                    "<strong>Subtraction:</strong> " + subtraction + "<br>" +
+                                                    "<strong>Multiplication:</strong> " + multiplication + "<br>" +
+                                                    "<strong>Division:</strong> " + division;
+    window.alert('Press OK to continue');
+}
+</script>
+
+</body>
+</html>
